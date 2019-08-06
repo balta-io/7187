@@ -1,0 +1,35 @@
+<div class="uk-background-primary uk-light">
+  <div class="uk-container">
+    <nav class="uk-navbar-container uk-navbar-transparent uk-margin" uk-navbar>
+      <div class="uk-navbar-left">
+        <a class="uk-navbar-item uk-logo" href="/">
+          <span class="uk-icon uk-margin-small-right" uk-icon="icon: icon-color-light; ratio: 0.15"></span>
+        </a>
+        <ul class="uk-navbar-nav">
+          <li><a [routerLink]="['/']">Produtos</a></li>
+          <li><a [routerLink]="['/account/pets']">Meus Pets</a></li>
+        </ul>
+      </div>
+      <div class="uk-navbar-right">
+        <ul class="uk-navbar-nav">
+          <li>
+            <a [routerLink]="['/cart']">
+              <span class="uk-icon uk-margin-small-right" uk-icon="icon: cart"></span>
+            </a>
+          </li>
+          <li>
+            <a [routerLink]="['/account']">
+              <span class="uk-icon uk-margin-small-right" uk-icon="icon: user"></span>
+              {{ user?.name }}
+            </a>
+          </li>
+          <li>
+            <a (click)="logout()">
+              <span class="uk-icon uk-margin-small-right" uk-icon="icon: sign-out"></span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+</div>

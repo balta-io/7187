@@ -1,0 +1,69 @@
+<div class="container">
+  <mat-toolbar color="primary">
+    <mat-toolbar-row>
+      <button mat-icon-button (click)="menu.toggle()">
+        <mat-icon>menu</mat-icon>
+      </button>
+      <h1>Sidenav</h1>
+    </mat-toolbar-row>
+
+    <mat-toolbar-row>
+      <span>Application Title</span>
+
+      <!-- This fills the remaining space of the current row -->
+      <span class="example-fill-remaining-space"></span>
+
+      <span>Right Aligned Text</span>
+    </mat-toolbar-row>
+  </mat-toolbar>
+
+  <mat-sidenav-container>
+    <mat-sidenav #menu mode="side" fixedInViewport="true">
+      <!-- mode: side, push, over -->
+      <mat-nav-list>
+        <a mat-list-item routerLink=".">Item X</a>
+        <a mat-list-item routerLink=".">Item X</a>
+        <a mat-list-item routerLink=".">Item X</a>
+        <a mat-list-item routerLink=".">Item X</a>
+        <a mat-list-item routerLink=".">Item X</a>
+        <a mat-list-item routerLink=".">Item X</a>
+        <a mat-list-item routerLink=".">Item X</a>
+        <a mat-list-item routerLink=".">Item X</a>
+        <a mat-list-item routerLink=".">Item X</a>
+      </mat-nav-list>
+      <p>
+        <button type="button" mat-button (click)="menu.toggle()">
+          Abrir/Fechar menu
+        </button>
+      </p>
+    </mat-sidenav>
+
+    <mat-sidenav-content>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce viverra commodo aliquet. Maecenas vitae ipsum et
+        ipsum gravida varius. Aenean dignissim tempor scelerisque. Aenean sollicitudin luctus lectus. Aliquam hendrerit
+        vestibulum sapien. Proin bibendum ornare eros ac faucibus. Praesent eu scelerisque dolor, sit amet vehicula
+        massa. Maecenas feugiat dolor at leo luctus bibendum. In malesuada quam ac sem euismod, at gravida turpis porta.
+        Praesent euismod, quam ac vulputate bibendum, nulla ipsum auctor mauris, id tempor magna magna scelerisque erat.
+        Aliquam augue nisl, suscipit sed ornare ac, commodo sit amet erat. Suspendisse vehicula est dolor, non rhoncus
+        metus auctor eu. Cras ullamcorper lacus feugiat sodales laoreet. Proin egestas augue sem, id convallis ante
+        dictum eget.<br>
+        <br>
+        Nam tempus bibendum elementum. Pellentesque vulputate dapibus lacus sit amet sodales. Nullam facilisis lacinia
+        dui id maximus. Proin a luctus magna. Mauris facilisis urna a libero convallis feugiat. Praesent posuere libero
+        dui, in venenatis ante interdum non. Nullam ac magna sodales lectus lobortis faucibus eu id risus. Nam et lacus
+        nec lacus tincidunt lacinia eget in sem. Duis facilisis mi et consectetur eleifend. Integer venenatis erat non
+        ante malesuada, at ultricies libero blandit. Aenean vel pretium elit. Etiam id mauris non lorem luctus maximus.
+        Vivamus varius pulvinar fermentum. Maecenas tempus gravida ipsum id bibendum. Duis velit mauris, aliquet sit
+        amet lacus a, facilisis convallis sapien. Mauris at consectetur sapien.<br>
+        <br>
+        Vestibulum in semper felis. Nunc gravida laoreet augue et gravida. Etiam quis arcu nec lacus vestibulum mattis
+        eget eu nulla. Donec molestie arcu nisl, sit amet dapibus justo posuere sit amet. Quisque a ultricies ex.
+        Quisque eleifend nisi vitae enim ultricies finibus. Nunc molestie nunc ac enim efficitur tincidunt. Sed at purus
+        et diam consectetur tincidunt. Aenean ornare, mi nec venenatis accumsan, nisi sem accumsan libero, vel tempus
+        diam nisi et ante. Fusce id consectetur enim. Pellentesque habitant morbi tristique senectus et netus et
+        malesuada fames ac turpis egestas. Donec mattis mi vel commodo mollis. Morbi id gravida dolor, in posuere
+        lectus. Vestibulum at sem semper nibh efficitur feugiat et molestie odio. Aenean et odio ut elit ullamcorper
+        faucibus vel sed ligula. Nam vulputate sapien libero, a aliquet tellus dignissim sed.</p>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</div>

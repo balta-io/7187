@@ -1,0 +1,86 @@
+<mat-accordion>
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        Painel 1
+      </mat-panel-title>
+      <mat-panel-description>
+        Descrição do Painel
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+    <p>
+      Conteúdo do Painel 1
+    </p>
+  </mat-expansion-panel>
+
+  <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        Painel 2
+      </mat-panel-title>
+      <mat-panel-description>
+        Descrição do Painel 2 | Status: {{panelOpenState ? 'aberto' : 'fechado'}}
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+    <p>
+      Conteúdo do Painel 2
+    </p>
+  </mat-expansion-panel>
+</mat-accordion>
+
+<br>
+<hr>
+<br>
+
+<mat-accordion>
+  <mat-expansion-panel [expanded]="step === 0" (opened)="setStep(0)" hideToggle>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        Passo 1
+      </mat-panel-title>
+    </mat-expansion-panel-header>
+
+    <p>
+      Conteúdo do Painel
+    </p>
+
+    <mat-action-row>
+      <button mat-button color="primary" (click)="nextStep()">Próximo</button>
+    </mat-action-row>
+  </mat-expansion-panel>
+
+  <mat-expansion-panel [expanded]="step === 1" (opened)="setStep(1)" hideToggle>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        Passo 2
+      </mat-panel-title>
+    </mat-expansion-panel-header>
+
+    <p>
+      Conteúdo do Painel
+    </p>
+
+    <mat-action-row>
+      <button mat-button color="warn" (click)="prevStep()">Anterior</button>
+      <button mat-button color="primary" (click)="nextStep()">Próximo</button>
+    </mat-action-row>
+  </mat-expansion-panel>
+
+  <mat-expansion-panel [expanded]="step === 2" (opened)="setStep(2)" hideToggle>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        Passo 3
+      </mat-panel-title>
+    </mat-expansion-panel-header>
+
+    <p>
+      Conteúdo do Painel
+    </p>
+
+    <mat-action-row>
+      <button mat-button color="warn" (click)="prevStep()">Anterior</button>
+      <button mat-button color="primary" (click)="nextStep()">Finalizar</button>
+    </mat-action-row>
+  </mat-expansion-panel>
+
+</mat-accordion>

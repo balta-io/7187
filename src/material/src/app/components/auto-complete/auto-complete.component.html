@@ -1,0 +1,33 @@
+<form [formGroup]="form">
+  <!-- Exemplo básico -->
+  <!-- <mat-form-field>
+    <input type="text" matInput formControlName="city" [matAutocomplete]="auto">
+  </mat-form-field>
+
+  <mat-autocomplete #auto="matAutocomplete">
+    <mat-option *ngFor="let city of cities" [value]="city">{{ city }}</mat-option>
+  </mat-autocomplete> 
+
+  <hr>-->
+
+  <!-- Exemplo com Filrto -->
+  <!-- <mat-form-field>
+    <input type="text" matInput formControlName="city" [matAutocomplete]="auto">
+  </mat-form-field>
+
+  <mat-autocomplete #auto="matAutocomplete">
+    <mat-option *ngFor="let city of filteredCities | async" [value]="city">{{ city }}</mat-option>
+  </mat-autocomplete>
+
+  <hr> -->
+
+  <!-- Selecionando o primeiro elemento -->
+  <mat-form-field>
+    <input type="text" matInput formControlName="city" [matAutocomplete]="auto">
+  </mat-form-field>
+
+  <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+    <mat-option *ngFor="let city of filteredCities | async" [value]="city">{{ city }}</mat-option>
+  </mat-autocomplete>
+
+</form>

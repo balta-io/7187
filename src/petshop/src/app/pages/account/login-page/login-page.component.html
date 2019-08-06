@@ -1,0 +1,35 @@
+<div class="uk-flex-center" uk-grid>
+  <div class="uk-width-1-3@m">
+    <p class="uk-text-center uk-margin-large-top uk-margin-medium-bottom">
+      <span class="uk-icon uk-margin-small-right" uk-icon="icon: logo-color-dark; ratio: 0.7"></span>
+    </p>
+
+    <app-loading *ngIf="busy"></app-loading>
+
+    <form [formGroup]="form" *ngIf="!busy">
+      <div class="uk-card uk-card-primary uk-card-body uk-box-shadow-small">
+        <h3 class="uk-card-title">Autentique-se</h3>
+        <div class="uk-margin">
+          <input class="uk-input uk-form-large" 
+          formControlName="username" type="text" 
+          placeholder="CPF"
+          mask="###.###.###-##"
+          [ngClass]="{'uk-form-danger': (!form.controls.username.valid && !form.controls.username.pristine) }">
+        </div>
+        <div class="uk-margin">
+          <input class="uk-input uk-form-large" formControlName="password" type="password" placeholder="Senha">
+        </div>
+        <div class="uk-margin uk-text-right">
+          <button class="uk-button uk-button-default" [disabled]="form.invalid" (click)="submit()">Entrar</button>
+        </div>
+      </div>
+    </form>
+
+    <p class="uk-text-center" *ngIf="!busy">
+      <a [routerLink]="['/signup']" class="uk-button uk-width-1-1 uk-button-large uk-button-primary uk-margin-small-bottom">Quero me
+        Cadastrar</a>
+      <br>
+      <a [routerLink]="['/reset-password']" class="uk-button uk-button-link">Esqueci minha senha</a>
+    </p>
+  </div>
+</div>

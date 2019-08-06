@@ -1,0 +1,15 @@
+<!-- <mat-grid-list cols="2" rowHeight="2:1">
+  <mat-grid-tile style="background-color: aqua">1</mat-grid-tile>
+  <mat-grid-tile style="background-color: red">2</mat-grid-tile>
+  <mat-grid-tile style="background-color: green">3</mat-grid-tile>
+  <mat-grid-tile style="background-color: yellow">4</mat-grid-tile>
+</mat-grid-list> -->
+
+
+<mat-grid-list cols="4" rowHeight="250px">
+  <mat-grid-tile *ngFor="let tile of tiles" [colspan]="tile.cols" [rowspan]="tile.rows" [style.background]="tile.color">
+    <mat-grid-tile-header>Header</mat-grid-tile-header>
+    <p>{{tile.text}}</p>
+    <mat-grid-tile-footer>Footer</mat-grid-tile-footer>
+  </mat-grid-tile>
+</mat-grid-list>

@@ -1,0 +1,178 @@
+{
+    "id": "mockoon_export",
+    "appVersion": "1.4.0",
+    "checksum": "81f1035fd1e22efd9790f791de9f2a45",
+    "subject": "full",
+    "data": [
+        {
+            "uuid": "9330ef50-4b52-11e9-b6ac-29cb5c5f6264",
+            "name": "7181",
+            "endpointPrefix": "v1",
+            "latency": 0,
+            "port": 3000,
+            "routes": [
+                {
+                    "uuid": "9330ef53-4b52-11e9-b6ac-29cb5c5f6264",
+                    "documentation": "",
+                    "method": "get",
+                    "endpoint": "products",
+                    "body": "[\n    {\n        \"_id\":\"481598b848f447b4b923ca2ad405aa09\",\n        \"title\":\"Cama M1 Urban\",\n        \"category\":\"accessories\",\n        \"description\":\"<ul><li><span><b>Pet:</b></span><span> Cachorros</span></li><li><span><b>Porte de Raça:</b></span><span> Grande, Médio e Pequeno</span></li><li><span><b>Idade:</b></span><span> Sênior, Adulto e Filhote</span></li><li><span><b>Material:</b></span><span> Plástico</span></li><li><span><b>Medidas<br>aproximadas:</b></span><span> Tamanho 8 (84 x 59,5 x h 25 cm), Tamanho 6 (70,5 x 52 x h 23,5 cm), Tamanho 4 (61,5 x 45 x h 21,5 cm), Tamanho 2 (52 x 36 x h 17,5 cm), Tamanho 12 (111 x 80,5 x h 33,5 cm), Tamanho 10 (93,5 x 68 x h 28 e5 cm)</span></li><li><span><b>Tipo:</b></span><span> Cama</span></li><li><span><b>Cor:</b></span><span> Bordô</span></li><li><span><b>Apresentação:</b></span><span> <p><span>Disponível nos tamanhos 2, 4, 6, 8, 10 e 12</span></p></span></li><li><span><b>Código de barras:</b></span><span> 8010690074689</span></li></ul>\",\n        \"price\":5999,\n        \"images\":[\n            \"https://baltaio.blob.core.windows.net/courses/7180/cama-m1-urban-puppy.jpg\"\n        ]\n    },\n    {\n        \"_id\":\"481598b848f447b4b923ca2ad405aa10\",\n        \"title\":\"Ração Golden Special Sabor Frango e Carne para Cães Adultos\",\n        \"category\":\"food\",\n        \"description\":\"<p>- Indicado para cães adultos;<br>- Livre de corantes e aromatizantes artificiais;<br>- Alimento rico em nutrientes;<br>- Promove o equilíbrio intestinal;<br>- Protege as articulações;<br>- Disponível em embalagens de 15kg e 20kg.</p>\",\n        \"price\":10490,\n        \"images\":[\n            \"https://baltaio.blob.core.windows.net/courses/7180/racao-golden.png\"\n        ]\n    },\n    {\n        \"_id\":\"481598b848f447b4b923ca2ad405aa11\",\n        \"title\":\"Ração Royal Canin Golden Retriever - Cães Adultos - 12kg\",\n        \"category\":\"food\",\n        \"description\":\"<p>- Indicada para cães adultos; <br>- Específica para pets da raça Golden Retriever; <br>- Auxilia na manutenção do peso ideal; <br>- Mantém a saúde da musculatura cardíaca; <br>- Proporciona uma pele e pelagem mais saudáveis,<br>- Disponível em embalagem de 12kg. </p>\",\n        \"price\":21999,\n        \"images\":[\n            \"https://baltaio.blob.core.windows.net/courses/7180/racao-royal-canin.png\"\n        ]\n    }\n]",
+                    "latency": 2000,
+                    "statusCode": "200",
+                    "headers": [
+                        {
+                            "uuid": "9330ef54-4b52-11e9-b6ac-29cb5c5f6264",
+                            "key": "",
+                            "value": ""
+                        }
+                    ],
+                    "filePath": "",
+                    "sendFileAsBody": false
+                },
+                {
+                    "uuid": "f703b990-4b89-11e9-8771-4f75132df4c8",
+                    "documentation": "",
+                    "method": "get",
+                    "endpoint": "pets",
+                    "body": "{\n    \n}",
+                    "latency": 800,
+                    "statusCode": "200",
+                    "headers": [
+                        {
+                            "uuid": "f703b991-4b89-11e9-8771-4f75132df4c8",
+                            "key": "",
+                            "value": ""
+                        }
+                    ],
+                    "filePath": "",
+                    "sendFileAsBody": false
+                },
+                {
+                    "uuid": "a9f0cec0-56f8-11e9-9e41-b1029a8da4d8",
+                    "documentation": "",
+                    "method": "post",
+                    "endpoint": "accounts/authenticate",
+                    "body": "{\n    \"customer\":{\n        \"_id\":\"e064caf4b91e4d908a388a734a34feb3\",\n        \"name\":\"Bruce Wayne\",\n        \"document\":\"04052789008\",\n        \"email\":\"customer@petshop.com\"\n    },\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVjODkwMzM4YjljMWYyNDI0Y2E2NDVmZCIsImVtYWlsIjoiYW5kcmViYWx0aWVyaUBnbWFpbC5jb20iLCJuYW1lIjoiQW5kcsOpIEJhbHRpZXJpIiwiZG9jdW1lbnQiOiIzNTI5MjYyMzgyMiIsInN1YnNjcmliZXIiOnRydWUsImlhdCI6MTU1NDMyMTg3MiwiZXhwIjoxNTU0NDA4MjcyfQ.YLS527i8yXnimL15jPyT8mkFAOYI7yorqh-zQyHq-N0\"\n}",
+                    "latency": 2000,
+                    "statusCode": "200",
+                    "headers": [
+                        {
+                            "uuid": "a9f0cec1-56f8-11e9-9e41-b1029a8da4d8",
+                            "key": "",
+                            "value": ""
+                        }
+                    ],
+                    "filePath": "",
+                    "sendFileAsBody": false
+                },
+                {
+                    "uuid": "16c7ac90-56fd-11e9-9e41-b1029a8da4d8",
+                    "documentation": "",
+                    "method": "post",
+                    "endpoint": "accounts/refresh-token",
+                    "body": "{\n    \"customer\":{\n        \"_id\":\"e064caf4b91e4d908a388a734a34feb3\",\n        \"name\":\"Bruce Wayne\",\n        \"document\":\"04052789008\",\n        \"email\":\"customer@petshop.com\"\n    },\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVjODkwMzM4YjljMWYyNDI0Y2E2NDVmZCIsImVtYWlsIjoiYW5kcmViYWx0aWVyaUBnbWFpbC5jb20iLCJuYW1lIjoiQW5kcsOpIEJhbHRpZXJpIiwiZG9jdW1lbnQiOiIzNTI5MjYyMzgyMiIsInN1YnNjcmliZXIiOnRydWUsImlhdCI6MTU1NDMyMTg3MiwiZXhwIjoxNTU0NDA4MjcyfQ.YLS527i8yXnimL15jPyT8mkFAOYI7yorqh-zQyHq-N0\"\n}",
+                    "latency": 2000,
+                    "statusCode": "200",
+                    "headers": [
+                        {
+                            "uuid": "16c7d3a0-56fd-11e9-9e41-b1029a8da4d8",
+                            "key": "",
+                            "value": ""
+                        }
+                    ],
+                    "filePath": "",
+                    "sendFileAsBody": false
+                },
+                {
+                    "uuid": "95cea1b0-6cdd-11e9-a903-45d807dc4afa",
+                    "documentation": "",
+                    "method": "post",
+                    "endpoint": "accounts",
+                    "body": "{\n    \"message\":\"Bem-vindo ao Dachshop!\"\n}",
+                    "latency": 800,
+                    "statusCode": "200",
+                    "headers": [
+                        {
+                            "uuid": "95cea1b1-6cdd-11e9-a903-45d807dc4afa",
+                            "key": "",
+                            "value": ""
+                        }
+                    ],
+                    "filePath": "",
+                    "sendFileAsBody": false
+                },
+                {
+                    "uuid": "cffc8350-6cdf-11e9-a903-45d807dc4afa",
+                    "documentation": "",
+                    "method": "post",
+                    "endpoint": "accounts/reset-password",
+                    "body": "{\n    \"message\":\"Uma nova senha foi gerada e enviada para seu E-mail!\"\n}",
+                    "latency": 1000,
+                    "statusCode": "200",
+                    "headers": [
+                        {
+                            "uuid": "cffc8351-6cdf-11e9-a903-45d807dc4afa",
+                            "key": "",
+                            "value": ""
+                        }
+                    ],
+                    "filePath": "",
+                    "sendFileAsBody": false
+                },
+                {
+                    "uuid": "a0059580-6ce2-11e9-a903-45d807dc4afa",
+                    "documentation": "",
+                    "method": "put",
+                    "endpoint": "accounts",
+                    "body": "{\n    \"message\":\"Dados atualizados com sucesso!\"\n}",
+                    "latency": 1000,
+                    "statusCode": "200",
+                    "headers": [
+                        {
+                            "uuid": "a0059581-6ce2-11e9-a903-45d807dc4afa",
+                            "key": "",
+                            "value": ""
+                        }
+                    ],
+                    "filePath": "",
+                    "sendFileAsBody": false
+                },
+                {
+                    "uuid": "2c981090-6ce3-11e9-a903-45d807dc4afa",
+                    "documentation": "",
+                    "method": "get",
+                    "endpoint": "accounts",
+                    "body": "{\n    \"name\":\"Bruce Wayne\",\n    \"document\":\"015.418.850-66\",\n    \"email\":\"batman@balta.io\"\n}",
+                    "latency": 1200,
+                    "statusCode": "200",
+                    "headers": [
+                        {
+                            "uuid": "2c981091-6ce3-11e9-a903-45d807dc4afa",
+                            "key": "",
+                            "value": ""
+                        }
+                    ],
+                    "filePath": "",
+                    "sendFileAsBody": false
+                }
+            ],
+            "modifiedAt": "2019-05-09T14:46:44.243Z",
+            "proxyMode": false,
+            "proxyHost": "",
+            "https": false,
+            "cors": true,
+            "headers": [
+                {
+                    "uuid": "9330ef51-4b52-11e9-b6ac-29cb5c5f6264",
+                    "key": "Access-Control-Allow-Origin",
+                    "value": "*"
+                },
+                {
+                    "uuid": "9330ef52-4b52-11e9-b6ac-29cb5c5f6264",
+                    "key": "Access-Control-Allow-Methods",
+                    "value": "GET, POST, PUT, DELETE"
+                }
+            ]
+        }
+    ]
+}

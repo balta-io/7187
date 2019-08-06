@@ -1,0 +1,54 @@
+<div class="uk-container" *ngIf="cart?.items.length > 0">
+  <nav class="uk-navbar-container" uk-navbar>
+    <div class="uk-navbar-left">
+      <ul class="uk-navbar-nav">
+        <li class="uk-active">Meu Carrinho</li>
+      </ul>
+    </div>
+    <div class="uk-navbar-right">
+      <ul class="uk-navbar-nav">
+        <li class="uk-active">
+          <a (click)="clear()">
+            <span class="uk-icon uk-margin-small-right" uk-icon="icon: close"></span>
+            Limpar Carrinho
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <br><br>
+  <div class="uk-grid-small" uk-grid *ngFor="let item of cart?.items">
+    <div class="uk-width-expand" uk-leader>
+      <img src="{{ item.image }}" class="uk-align-left" alt="{{ item.product }}" width="64" height="64">
+      <a href="#">{{ item.product }}</a> <br>
+      <strong>{{ item.quantity }} unidade(s)</strong>
+    </div>
+    <div>
+      <br>
+      {{ item.price/100 | currency: 'BRL' }}
+      <a class="uk-button uk-button-link uk-align-right" (click)="remove(item)">
+        <span class="uk-icon" uk-icon="icon: close"></span>
+      </a>
+    </div>
+  </div>
+
+
+  <div class="uk-text-right">
+    <h3 class="uk-text-right">
+      {{ total()/100 | currency: 'BRL' }}
+    </h3>
+    <a href="/checkout" class="uk-button uk-button-large uk-button-primary uk-margin-small-bottom">
+      FINALIZAR COMPRA
+    </a>
+  </div>
+</div>
+
+<div class="uk-container" *ngIf="cart?.items.length == 0">
+  <br>
+  <br>
+  <br>
+  <p class="uk-text-center"><em>Seu carrinho está vazio</em></p>
+  <br>
+  <br>
+  <br>
+</div>

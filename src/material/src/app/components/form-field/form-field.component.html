@@ -1,0 +1,132 @@
+<h3>Básico</h3>
+<div>
+  <mat-form-field>
+    <input matInput placeholder="Input">
+  </mat-form-field>
+  <br>
+  <mat-form-field>
+    <textarea matInput placeholder="Textarea"></textarea>
+  </mat-form-field>
+  <br>
+  <mat-form-field>
+    <mat-select placeholder="Select">
+      <mat-option value="option">Option</mat-option>
+    </mat-select>
+  </mat-form-field>
+</div>
+
+<hr>
+
+<h3>Variando a Aparência</h3>
+<p>
+  <mat-form-field appearance="legacy">
+    <mat-label>Legado</mat-label>
+    <input matInput placeholder="Placeholder">
+    <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+    <mat-hint>Dica</mat-hint>
+  </mat-form-field>
+</p>
+<p>
+  <mat-form-field appearance="standard">
+    <mat-label>Padrão</mat-label>
+    <input matInput placeholder="Placeholder">
+    <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+    <mat-hint>Dica</mat-hint>
+  </mat-form-field>
+</p>
+<p>
+  <mat-form-field appearance="fill">
+    <mat-label>Fill</mat-label>
+    <input matInput placeholder="Placeholder">
+    <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+    <mat-hint>Hint</mat-hint>
+  </mat-form-field>
+</p>
+<p>
+  <mat-form-field appearance="outline">
+    <mat-label>Outline</mat-label>
+    <input matInput placeholder="Placeholder">
+    <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+    <mat-hint>Hint</mat-hint>
+  </mat-form-field>
+</p>
+
+<hr>
+
+<h3>Floating Label</h3>
+
+<div>
+  <form [formGroup]="options">
+    <mat-checkbox formControlName="hideRequired">Esconder marcadores</mat-checkbox>
+    <div>
+      <label>Float: </label>
+      <mat-radio-group formControlName="floatLabel">
+        <mat-radio-button value="auto">Auto</mat-radio-button>
+        <mat-radio-button value="always">Always</mat-radio-button>
+        <mat-radio-button value="never">Never</mat-radio-button>
+      </mat-radio-group>
+    </div>
+  </form>
+  <br>
+  <mat-form-field [hideRequiredMarker]="options.value.hideRequired" [floatLabel]="options.value.floatLabel">
+    <input matInput placeholder="Simples" required>
+  </mat-form-field>
+  <br>
+  <mat-form-field [floatLabel]="options.value.floatLabel">
+    <mat-label>Label e Placeholder</mat-label>
+    <input matInput placeholder="Simple placeholder">
+  </mat-form-field>
+  <br>
+  <mat-form-field [hideRequiredMarker]="options.value.hideRequired" [floatLabel]="options.value.floatLabel">
+    <mat-select required>
+      <mat-option>-- Nenhum --</mat-option>
+      <mat-option value="option">Opções</mat-option>
+    </mat-select>
+    <mat-label>
+      <mat-icon>favorite</mat-icon> <b> Fancy</b> <i> label</i>
+    </mat-label>
+  </mat-form-field>
+</div>
+
+<hr>
+
+<h3>Hint Label</h3>
+<div class="example-container">
+  <mat-form-field hintLabel="Max 10 characters">
+    <input matInput #input maxlength="10" placeholder="Enter some input">
+    <mat-hint align="end">{{input.value?.length || 0}}/10</mat-hint>
+  </mat-form-field>
+  <br>
+  <mat-form-field>
+    <mat-select placeholder="Select me">
+      <mat-option value="option">Option</mat-option>
+    </mat-select>
+    <mat-hint align="end">Here's the dropdown arrow ^</mat-hint>
+  </mat-form-field>
+</div>
+
+<hr>
+
+<h3>Error Message</h3>
+<div class="example-container">
+  <mat-form-field>
+    <input matInput placeholder="Enter your email" [formControl]="email" required>
+    <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+  </mat-form-field>
+</div>
+
+<hr>
+
+<h3>Prefixo e Sulfixo</h3>
+<div class="example-container">
+  <mat-form-field>
+    <input matInput placeholder="Enter your password" [type]="hide ? 'password' : 'text'">
+    <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+  </mat-form-field>
+  <br>
+  <mat-form-field>
+    <input matInput placeholder="Amount" type="number" class="example-right-align">
+    <span matPrefix>$&nbsp;</span>
+    <span matSuffix>.00</span>
+  </mat-form-field>
+</div>

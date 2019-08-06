@@ -1,0 +1,104 @@
+<h3>Básico</h3>
+<mat-form-field>
+  <input matInput [matDatepicker]="picker" placeholder="Selecione uma Data">
+  <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+  <mat-datepicker #picker></mat-datepicker>
+</mat-form-field>
+<hr>
+<h3>Ícone Customizado</h3>
+<mat-form-field>
+  <input matInput [matDatepicker]="picker2" placeholder="Selecione uma Data">
+  <mat-datepicker-toggle matSuffix [for]="picker2">
+    <mat-icon matDatepickerToggleIcon>keyboard_arrow_down</mat-icon>
+  </mat-datepicker-toggle>
+  <mat-datepicker #picker2></mat-datepicker>
+</mat-form-field>
+<hr>
+<h3>Alterando a Visualização</h3>
+<mat-form-field>
+  <input matInput [matDatepicker]="picker3" placeholder="Selecione uma Data">
+  <mat-datepicker-toggle matSuffix [for]="picker3"></mat-datepicker-toggle>
+  <mat-datepicker #picker3 startView="year"></mat-datepicker>
+</mat-form-field>
+<hr>
+<h3>Setando a Data</h3>
+<mat-form-field>
+  <input matInput [matDatepicker]="picker4" placeholder="Value binding" [value]="date.value">
+  <mat-datepicker-toggle matSuffix [for]="picker4"></mat-datepicker-toggle>
+  <mat-datepicker #picker4></mat-datepicker>
+</mat-form-field>
+<hr>
+<h3>Alterando as Cores</h3>
+<mat-form-field color="accent">
+  <mat-label>Data</mat-label>
+  <input matInput [matDatepicker]="picker5">
+  <mat-datepicker-toggle matSuffix [for]="picker5"></mat-datepicker-toggle>
+  <mat-datepicker #picker5></mat-datepicker>
+</mat-form-field>
+<br>
+<mat-form-field color="accent">
+  <mat-label>Data</mat-label>
+  <input matInput [matDatepicker]="picker6">
+  <mat-datepicker-toggle matSuffix [for]="picker6"></mat-datepicker-toggle>
+  <mat-datepicker #picker6 color="primary"></mat-datepicker>
+</mat-form-field>
+<hr>
+<h3>Min/Max Date</h3>
+<mat-form-field>
+  <input matInput [min]="minDate" [max]="maxDate" [matDatepicker]="picker7" placeholder="Data">
+  <mat-datepicker-toggle matSuffix [for]="picker7"></mat-datepicker-toggle>
+  <mat-datepicker #picker7></mat-datepicker>
+</mat-form-field>
+<hr>
+<h3>Filtrando Datas</h3>
+<mat-form-field>
+  <input matInput [matDatepickerFilter]="myFilter" [matDatepicker]="picker8" placeholder="Data">
+  <mat-datepicker-toggle matSuffix [for]="picker8"></mat-datepicker-toggle>
+  <mat-datepicker #picker8></mat-datepicker>
+</mat-form-field>
+<hr>
+<h3>Desabilitando</h3>
+<p>
+  <mat-form-field>
+    <input matInput [matDatepicker]="picker9" placeholder="Desabilitado" disabled>
+    <mat-datepicker-toggle matSuffix [for]="picker9"></mat-datepicker-toggle>
+    <mat-datepicker #picker9></mat-datepicker>
+  </mat-form-field>
+</p>
+
+<p>
+  <mat-form-field>
+    <input matInput [matDatepicker]="picker10" placeholder="Sem Popup">
+    <mat-datepicker-toggle matSuffix [for]="picker10" disabled></mat-datepicker-toggle>
+    <mat-datepicker #picker10></mat-datepicker>
+  </mat-form-field>
+</p>
+
+<p>
+  <mat-form-field>
+    <input matInput [matDatepicker]="picker11" placeholder="Sem Input" disabled>
+    <mat-datepicker-toggle matSuffix [for]="picker11"></mat-datepicker-toggle>
+    <mat-datepicker #picker11 disabled="false"></mat-datepicker>
+  </mat-form-field>
+</p>
+<hr>
+<h3>Touch Mode</h3>
+<mat-form-field class="example-full-width">
+  <input matInput [matDatepicker]="picker12" placeholder="Data">
+  <mat-datepicker-toggle matSuffix [for]="picker12"></mat-datepicker-toggle>
+  <mat-datepicker touchUi #picker12></mat-datepicker>
+</mat-form-field>
+<hr>
+<h3>Abertura Manual</h3>
+<mat-form-field class="example-full-width">
+  <input matInput [matDatepicker]="picker13" placeholder="Data">
+  <mat-datepicker #picker13></mat-datepicker>
+</mat-form-field>
+<button mat-raised-button color="primary" (click)="picker13.open()">Abrir</button>
+<hr>
+<h3>Datas Selecionadas</h3>
+<mat-form-field>
+  <input matInput [matDatepicker]="picker14" placeholder="Data">
+  <mat-datepicker-toggle matSuffix [for]="picker14"></mat-datepicker-toggle>
+  <mat-datepicker [dateClass]="dateClass" #picker14></mat-datepicker>
+</mat-form-field>

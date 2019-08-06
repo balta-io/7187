@@ -1,0 +1,33 @@
+<form [formGroup]="form">
+  <h3>Checkbox</h3>
+  <mat-checkbox formControlName="checkbox">Eu aceito</mat-checkbox>
+  <hr>
+  <h3>Input</h3>
+  <mat-form-field>
+    <input matInput placeholder="Sua Cidade" value="São Paulo">
+  </mat-form-field>
+  <br>
+  <mat-form-field>
+    <textarea matInput placeholder="Deixe um comentário"></textarea>
+  </mat-form-field>
+  <br>
+  <mat-form-field>
+    <input matInput placeholder="Email" formControlName="email" [errorStateMatcher]="matcher">
+    <mat-hint>Dica: Informe seu E-mail</mat-hint>
+    <mat-error *ngIf="form.controls.email.hasError('required')">
+      Campo obrigatório
+    </mat-error>
+    <mat-error *ngIf="form.controls.email.hasError('email')">
+      E-mail inválido
+    </mat-error>
+  </mat-form-field>
+  <hr>
+  <h3>Radio</h3>
+  <mat-radio-group aria-label="Select an option" formControlName="radio">
+    <mat-radio-button value="1">Opção 1</mat-radio-button>
+    <mat-radio-button value="2">Opção 2</mat-radio-button>
+  </mat-radio-group>
+  <hr>
+  <h3>Slide Toggle</h3>
+  <mat-slide-toggle formControlName="checkbox">Marcar</mat-slide-toggle>
+</form>

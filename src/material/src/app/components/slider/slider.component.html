@@ -1,0 +1,38 @@
+<h3>Básico</h3>
+<mat-slider></mat-slider>
+
+<hr>
+
+<h3>Selecionando Valor</h3>
+
+<mat-slider min="1" max="5" step="0.5" value="1.5"></mat-slider>
+
+<hr>
+
+<h3>Orientação</h3>
+
+<mat-slider vertical></mat-slider>
+
+<hr>
+
+<h3>Inversão</h3>
+
+<mat-slider invert></mat-slider>
+
+<hr>
+
+<h3>Thumb Label</h3>
+
+<mat-slider thumbLabel tickInterval="1"></mat-slider>
+
+<hr>
+
+<h3>Formatando Thumb Label</h3>
+
+<mat-slider thumbLabel [displayWith]="formatLabel" tickInterval="1000" min="1" max="100000"></mat-slider>
+
+<hr>
+
+<h3>Thick Marks</h3>
+
+<mat-slider step="4" tickInterval="3"></mat-slider>

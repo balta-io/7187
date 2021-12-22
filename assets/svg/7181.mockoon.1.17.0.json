@@ -1,0 +1,247 @@
+{
+    "source": "mockoon:1.17.0",
+    "data": [
+        {
+            "type": "environment",
+            "item": {
+                "uuid": "ebeeeee9-91f7-49d2-b866-8ccbdf0f7cdc",
+                "lastMigration": 19,
+                "name": "7181",
+                "endpointPrefix": "v1",
+                "latency": 0,
+                "port": 3000,
+                "routes": [
+                    {
+                        "uuid": "be7794d4-7a47-496c-bea7-c53b327cce04",
+                        "documentation": "Retorna uma lista detalhada de todos produtos cadastrados",
+                        "method": "get",
+                        "endpoint": "products",
+                        "responses": [
+                            {
+                                "uuid": "ced97c76-ba2d-4acd-bbe6-d941667d8d13",
+                                "body": "[\n  {\n    \"_id\": \"481598b848f447b4b923ca2ad405aa09\",\n    \"title\": \"Cama M1 Urban\",\n    \"category\": \"accessories\",\n    \"description\": [\n      \"<ul><li><span><b>Pet:</b></span><span> Cachorros</span></li><li><span><b>Porte de Raça:</b></span><span> Grande, Médio e Pequeno</span></li><li><span><b>Idade:</b></span><span> Sênior, Adulto e Filhote</span></li><li><span><b>Material:</b></span><span> Plástico</span></li><li><span><b>Medidas<br>aproximadas:</b></span><span> Tamanho 8 (84 x 59,5 x h 25 cm), Tamanho 6 (70,5 x 52 x h 23,5 cm), Tamanho 4 (61,5 x 45 x h 21,5 cm), Tamanho 2 (52 x 36 x h 17,5 cm), Tamanho 12 (111 x 80,5 x h 33,5 cm), Tamanho 10 (93,5 x 68 x h 28 e5 cm)</span></li><li><span><b>Tipo:</b></span><span> Cama</span></li><li><span><b>Cor:</b></span><span> Bordô</span></li><li><span><b>Apresentação:</b></span><span> <p><span>Disponível nos tamanhos 2, 4, 6, 8, 10 e 12</span></p></span></li><li><span><b>Código de barras:</b></span><span> 8010690074689</span></li></ul>\\\",\\n        \\\"price\\\":5999,\\n        \\\"images\\\":[\\n            \\\"https://baltaio.blob.core.windows.net/courses/7180/cama-m1-urban-puppy.jpg\"\n    ]\n  },\n  {\n    \"_id\": \"481598b848f447b4b923ca2ad405aa10\",\n    \"title\": \"Ração Golden Special Sabor Frango e Carne para Cães Adultos\",\n    \"category\": \"food\",\n    \"description\": \"<p>- Indicado para cães adultos;<br>- Livre de corantes e aromatizantes artificiais;<br>- Alimento rico em nutrientes;<br>- Promove o equilíbrio intestinal;<br>- Protege as articulações;<br>- Disponível em embalagens de 15kg e 20kg.</p>\",\n    \"price\": 10490,\n    \"images\": [\n      \"https://baltaio.blob.core.windows.net/courses/7180/racao-golden.png\"\n    ]\n  },\n  {\n    \"_id\": \"481598b848f447b4b923ca2ad405aa11\",\n    \"title\": \"Ração Royal Canin Golden Retriever - Cães Adultos - 12kg\",\n    \"category\": \"food\",\n    \"description\": \"<p>- Indicada para cães adultos; <br>- Específica para pets da raça Golden Retriever; <br>- Auxilia na manutenção do peso ideal; <br>- Mantém a saúde da musculatura cardíaca; <br>- Proporciona uma pele e pelagem mais saudáveis,<br>- Disponível em embalagem de 12kg. </p>\",\n    \"price\": 21999,\n    \"images\": [\n      \"https://baltaio.blob.core.windows.net/courses/7180/racao-royal-canin.png\"\n    ]\n  }\n]",
+                                "latency": 2000,
+                                "statusCode": 200,
+                                "label": "",
+                                "headers": [],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false,
+                                "fallbackTo404": false
+                            }
+                        ],
+                        "enabled": true,
+                        "randomResponse": false,
+                        "sequentialResponse": false
+                    },
+                    {
+                        "uuid": "ddb5f82f-6ceb-4753-b59f-dca869e52018",
+                        "documentation": "Retorna uma lista detalhada de todos pets cadastrados",
+                        "method": "get",
+                        "endpoint": "pets",
+                        "responses": [
+                            {
+                                "uuid": "76d12bc7-eb41-42e4-81f5-368b11d2e331",
+                                "body": "{}",
+                                "latency": 800,
+                                "statusCode": 200,
+                                "label": "",
+                                "headers": [],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false,
+                                "fallbackTo404": false
+                            }
+                        ],
+                        "enabled": true,
+                        "randomResponse": false,
+                        "sequentialResponse": false
+                    },
+                    {
+                        "uuid": "4bde5af7-4ecd-4d5a-b708-e8f3b4468950",
+                        "documentation": "",
+                        "method": "post",
+                        "endpoint": "accounts/authenticate",
+                        "responses": [
+                            {
+                                "uuid": "7aaf22de-b7d5-4cea-b63d-6765ef500fb2",
+                                "body": "{\n  \"customer\": {\n    \"_id\": \"e064caf4b91e4d908a388a734a34feb3\",\n    \"name\": \"Bruce Wayne\",\n    \"document\": \"04052789008\",\n    \"email\": \"customer@petshop.com\"\n  },\n  \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ.eyJpZCI6IjVjODkwMzM4YjljMWYyNDI0Y2E2NDVmZCIsImVtYWlsIjoiYW5kcmViYWx0aWVyaUBnbWFpbC5jb20iLCJuYW1lIjoiQW5kcsOpIEJhbHRpZXJpIiwiZG9jdW1lbnQiOiIzNTI5MjYyMzgyMiIsInN1YnNjcmliZXIiOnRydWUsImlhdCI6MTU1NDMyMTg3MiwiZXhwIjoxNTU0NDA4MjcyfQ.YLS527i8yXnimL15jPyT8mkFAOYI7yorqh-zQyHq-N0\"\n}",
+                                "latency": 2000,
+                                "statusCode": 200,
+                                "label": "",
+                                "headers": [],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false,
+                                "fallbackTo404": false
+                            }
+                        ],
+                        "enabled": true,
+                        "randomResponse": false,
+                        "sequentialResponse": false
+                    },
+                    {
+                        "uuid": "72292285-9cb3-4618-b35f-7de559eadb84",
+                        "documentation": "",
+                        "method": "post",
+                        "endpoint": "accounts/refresh-token",
+                        "responses": [
+                            {
+                                "uuid": "76186f83-70f3-48e4-90f1-cf83fdb7ae93",
+                                "body": "{\n  \"customer\": {\n  \"_id\": \"e064caf4b91e4d908a388a734a34feb3\",\n  \"name\": \"Bruce Wayne\",\n  \"document\": \"04052789008\",\n  \"email\": \"customer@petshop.com\"\n    \n  },\\\n  \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVjODkwMzM4YjljMWYyNDI0Y2E2NDVmZCIsImVtYWlsIjoiYW5kcmViYWx0aWVyaUBnbWFpbC5jb20iLCJuYW1lIjoiQW5kcsOpIEJhbHRpZXJpIiwiZG9jdW1lbnQiOiIzNTI5MjYyMzgyMiIsInN1YnNjcmliZXIiOnRydWUsImlhdCI6MTU1NDMyMTg3MiwiZXhwIjoxNTU0NDA4MjcyfQ.YLS527i8yXnimL15jPyT8mkFAOYI7yorqh-zQyHq-N0\"\n  \n}",
+                                "latency": 2000,
+                                "statusCode": 200,
+                                "label": "",
+                                "headers": [],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false,
+                                "fallbackTo404": false
+                            }
+                        ],
+                        "enabled": true,
+                        "randomResponse": false,
+                        "sequentialResponse": false
+                    },
+                    {
+                        "uuid": "29c67810-0013-4e49-8c5f-6abdb1f1f765",
+                        "documentation": "",
+                        "method": "post",
+                        "endpoint": "accounts",
+                        "responses": [
+                            {
+                                "uuid": "3ec83d67-971e-4978-a253-e40877d97eac",
+                                "body": "{\n  \"message\": \"Bem-vindo ao Dachshop!\"\n}",
+                                "latency": 800,
+                                "statusCode": 200,
+                                "label": "",
+                                "headers": [],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false,
+                                "fallbackTo404": false
+                            }
+                        ],
+                        "enabled": true,
+                        "randomResponse": false,
+                        "sequentialResponse": false
+                    },
+                    {
+                        "uuid": "71b2e54a-d641-40e3-a967-71a49c78196f",
+                        "documentation": "",
+                        "method": "post",
+                        "endpoint": "accounts/reset-password",
+                        "responses": [
+                            {
+                                "uuid": "1faf2cac-8a3c-41bb-9a6b-4d5c4a86efbf",
+                                "body": "{\n  \"message\": \"Uma nova senha foi gerada e enviada para seu E-mail!\"\n}",
+                                "latency": 1000,
+                                "statusCode": 200,
+                                "label": "",
+                                "headers": [],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false,
+                                "fallbackTo404": false
+                            }
+                        ],
+                        "enabled": true,
+                        "randomResponse": false,
+                        "sequentialResponse": false
+                    },
+                    {
+                        "uuid": "77f66c88-1a93-456d-8b43-f7a07b99cf3c",
+                        "documentation": "",
+                        "method": "put",
+                        "endpoint": "accounts",
+                        "responses": [
+                            {
+                                "uuid": "ddcada67-3f39-4054-8fc3-a3a77e2f9ba9",
+                                "body": "{\n  \"message\": \"Dados atualizados com sucesso!\"\n}",
+                                "latency": 1000,
+                                "statusCode": 200,
+                                "label": "",
+                                "headers": [],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false,
+                                "fallbackTo404": false
+                            }
+                        ],
+                        "enabled": true,
+                        "randomResponse": false,
+                        "sequentialResponse": false
+                    },
+                    {
+                        "uuid": "a93bd6e2-fe54-42f6-9c57-9e87d2a07bd5",
+                        "documentation": "",
+                        "method": "get",
+                        "endpoint": "accounts",
+                        "responses": [
+                            {
+                                "uuid": "bad08e59-d7aa-4516-877f-d1881c3639f7",
+                                "body": "{\n  \"name\": \"Bruce Wayne\",\n  \"document\": \"015.418.850-66\",\n  \"email\": \"batman@balta.io\"\n}",
+                                "latency": 1200,
+                                "statusCode": 200,
+                                "label": "",
+                                "headers": [],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false,
+                                "fallbackTo404": false
+                            }
+                        ],
+                        "enabled": true,
+                        "randomResponse": false,
+                        "sequentialResponse": false
+                    }
+                ],
+                "proxyMode": false,
+                "proxyHost": "",
+                "proxyRemovePrefix": false,
+                "tlsOptions": {
+                    "enabled": false,
+                    "type": "CERT",
+                    "pfxPath": "",
+                    "certPath": "",
+                    "keyPath": "",
+                    "caPath": "",
+                    "passphrase": ""
+                },
+                "cors": true,
+                "headers": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    },
+                    {
+                        "key": "Access-Control-Allow-Origin",
+                        "value": "*"
+                    },
+                    {
+                        "key": "Access-Control-Allow-Methods",
+                        "value": "GET, POST, PUT, DELETE"
+                    }
+                ],
+                "proxyReqHeaders": [],
+                "proxyResHeaders": []
+            }
+        }
+    ]
+}
